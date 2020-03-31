@@ -1,0 +1,44 @@
+<%- include("../partials/header") -%>
+<body>
+<div class="container-fluid">
+<div class="update-container">
+	<h1 class="updateh">Update</h1>
+	<div class="table-inner">
+		<form class="updateform" method="post" action="/department/update/<%= id %>">
+		 	 <div class="form-group ">
+		 	 <% values.forEach(function(val){%>
+		 	 	<label for="deptid" id="sid">Id</label>
+				  <input type="text" class="form-control" id="deptid"required name="deptid" value="<%=val.deptid%>" placeholder="Streamid"></input>
+
+				<label for="deptname">Stream </label>
+
+			 <select class="form-control" id="deptnam" required name="deptname" >
+				   <% if(val.deptname=='CSE1'){ %>
+					      <option value="BIO1">BIO</option>
+					      <option value="CSE1" selected>CSE</option>
+					      <option value="ECNOMICS1">ECNOMICS</option>
+					    <%  }; %>
+					  <% if(val.deptname=='BIO1'){ %>
+					      <option value="BIO1" selected>BIO</option>
+					      <option value="CSE1">CSE</option>
+					      <option value="ECNOMICS1">ECNOMICS</option>
+					    <%  }; %>
+					    <% if(val.deptname=='ECNOMICS1'){ %>
+					      <option value="BIO1">BIO</option>
+					      <option value="CSE1">CSE</option>
+					      <option value="ECNOMICS1" selected>ECNOMICS</option>
+					    <%  }; %>
+				</select>
+				<%});%>
+				<label for="hod">HOD</label>
+				<select class="form-control" id="hod" name="hod">
+				</select>
+		 		<button type="submit" class="btn btn-primary update-button">Update</button>
+			</div>
+		</form>
+		</div>
+	</div>
+</div>
+ <%- include("../partials/footer/") %>
+</body>
+</html>

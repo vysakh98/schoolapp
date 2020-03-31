@@ -1,0 +1,24 @@
+<%- include("../partials/header") -%>
+<div class="container-fluid">
+<form method="post" action="/classmaster/delete/<%= id %>">
+<div class="card" >
+  <div class="card-body">
+    <h5 class="card-title">Delete !</h5>
+    <% results.forEach(function(result){%>
+    <p class="card-text">Are you sure you want to delete this record ?</p>
+
+    <p class="card-text">Classid:<%=result.classid%></p> 
+    <P class="card-text">Blockno:<%= result.block%></p>
+    <P class="card-text">Roomno:<%= result.roomno %></p>
+    <P class="card-text">Streamid:<%= result.streamid %></p>
+    <P class="card-text">Class:<%= result.class %></p>
+    <%});%>
+    <button class="btn btn-success" name=Deleteaction value="no">No</a>
+    <button class="btn btn-danger" name=Deleteaction value="yes">Yes</a>
+  </div>
+</div>
+</form>
+<div>
+ <%- include("../partials/footer/") %>
+</body>
+</html>

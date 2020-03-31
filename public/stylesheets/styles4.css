@@ -1,0 +1,289 @@
+
+
+nav button{
+	margin-right: 10px;
+	position: relative;
+	left:20px;
+}
+
+.Logout{
+	position: relative;
+	left: 100px;
+	font-size: 1.5em;
+}
+
+.insert{
+	position:absolute;
+	left:1000px;
+	top:5px;
+	z-index: 1;
+}
+.btn-success{
+	margin-right:
+	5px;
+
+}
+.navbar-brand{
+	font-size: 1.5em;
+}
+
+nav{
+	background-color:#323232;
+}
+
+.container-fluid{
+
+	position: relative;
+	top:50px;
+	
+}
+
+.insertform input{
+	width: 400px;
+	margin:auto;
+}
+.insertform select{
+	width: 400px;
+	margin:auto;
+}
+
+.updateform input{
+	width: 400px;
+	margin:auto;
+}
+.updateform select{
+	width: 400px;
+	margin:auto;
+}
+
+.updateform label{
+	position: relative;
+	top:5px;
+}
+.streamh{
+	position:relative;
+	bottom:0px;
+	margin-bottom: 0px;
+	width: 100%
+	color: black;
+	background-color:#d1cebd;
+	font-family: 'Baloo Thambi 2', cursive;
+}
+
+.table-container{
+	width:800px;
+	border:1px solid black;
+	text-align: center;
+	margin:auto;
+	overflow-x: hidden;
+	background-color: white;
+}
+.update-container{
+	width:800px;
+	border:1px solid black;
+	margin:10px 15px 15px 15px;
+	text-align: center;
+	margin:auto;
+	background-color: white;
+}
+.updateh{
+	color: black;
+	background-color:#d1cebd;
+	margin-bottom: 0;
+	font-family: 'Baloo Thambi 2', cursive;
+
+}
+.insert-container{
+	width:800px;
+	border:1px solid black;
+	margin:10px 15px 15px 15px;
+	text-align: center;
+	margin:auto;
+	background-color: white;
+
+}
+
+.inserth{
+	color: black;
+	background-color:#d1cebd;
+	margin-bottom: 0;
+	font-family: 'Baloo Thambi 2', cursive;
+}
+
+.table-inner{
+	width:100%;
+	margin:auto;
+	border:1px solid black;
+}
+
+svg{
+	position: relative;
+	bottom:2px;
+}
+
+
+.nav-item button{
+	position: relative;
+	left: 50px;
+}
+
+h1{
+	text-align: left;
+	padding-left: 2px;
+}
+
+@media only screen and (max-width: 873px) {
+  .insert {
+
+  	position:absolute;
+	left:680px;
+	top:5px;
+	z-index: 1;
+
+  }
+}
+.card{
+	width: 50%;
+	margin:auto;
+}
+
+table{
+	background-color: white;
+}
+
+.insert-button{
+	margin-top: 8px;
+	position: relative;
+	right:165px;
+}
+
+.update-button{
+	margin-top:10px;
+	position: relative;
+	right:160px;
+}
+
+label{
+	padding:2px;
+	position: relative;
+	right:170px;
+	font-family: 'Roboto', sans-serif;
+	font-size:20px;
+}
+
+#stream{
+	position: relative;
+	right:170px;
+	font-family: 'Baloo Thambi 2', cursive;
+	font-size: 20px;
+}
+
+#sid{
+	position: relative;
+	right:190px;
+}
+.teachercontainer{
+	position:relative;
+	margin-top:60px;
+}
+#teacher{
+	padding:0;
+	display: flex;
+	flex-wrap: wrap;
+}
+#teachercard{
+	position:relative;
+	width:400px;
+	margin-top:0px; 
+	padding-right: 5px;
+	border:1px groove black;
+}
+#teacherbody{
+	padding-right:5px;
+}
+
+.subject{
+	position: relative;
+	left:40px;
+}
+.teacherlisthead{
+	border: 1px solid black;
+	height:100px;
+}
+.teacherlisthead h1{
+	position: absolute;
+	margin-top:20px;
+}
+.teacherinsert{
+	position: absolute;
+	right:0px;
+	margin-top:25px;
+}
+
+#teachercard:hover{
+
+box-shadow: 5px 5px #888888;
+	
+
+}
+
+#teacherbody p{
+	font-family: 'Baloo Thambi 2', cursive;
+	font-size:18px;
+}
+
+#teacherbody a{
+	position:relative;
+	left:270px;
+}
+
+label[for="img"]{
+	position: relative;
+	top:10px;
+	left:5px;
+}
+input[type="file"]{
+	position: relative;
+	top:10px;
+}
+label[for="qualification"]{
+	position: relative;
+	right:140px;
+}
+label[for="deptname"]{
+	position: relative;
+	right:140px;
+}
+label[for="address"]{
+	position: relative;
+	right:160px;
+}
+label[for="pass"]{
+	position: relative;
+	right:160px;
+}
+.card-img-top{
+	position:relative;
+	top:10px;
+	left: 2px;
+	border-radius: 15px 50px;
+	height: 250px;
+	width: 100px;
+}
+
+.teachersave{
+	position: relative;
+	top:5px;
+}
+
+.jumbotron{
+	margin-top:0px;
+	text-align: center;
+}
+.jumbotron p{
+
+	font-family: 'Baloo Thambi 2', cursive;
+	font-size:30px;
+
+}
+

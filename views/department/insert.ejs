@@ -1,0 +1,32 @@
+<%- include("../partials/header") %>
+
+<body>
+<div class="container-fluid">
+
+<div class="insert-container">
+
+	<h1 class="inserth">Add Department</h1>
+
+	<div class="table-inner">
+
+		<form class="insertform"  method="post" action="/department/insert">
+		 	 <div class="form-group ">
+					<label for="deptnam">Name</label>
+					 <select class="form-control" id="deptnam"  name="deptname">
+				    	<option value="CSE1">CSE</option>
+				    	<option value="BIO1">BIO</option>
+				    	<option value="ECNOMICS1">ECNOMICS</option>
+						</select>
+					 <label for="hod">HOD</label>
+					 <select class="form-control" id="hod" name="hod">
+						</select>
+					  
+		 			 <button type="submit" class="btn btn-primary insert-button" >Save</button>
+			</div>
+		</form>
+</div>
+</div>
+</div>
+ <%- include("../partials/footer/") %>
+</body>
+</html>

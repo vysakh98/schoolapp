@@ -1,0 +1,50 @@
+<%- include("../partials/header") -%>
+<body>
+<div class="container-fluid">
+<div class="update-container">
+	<h1 class="updateh">Update</h1>
+	<div class="table-inner">
+		<form class="updateform" method="post" action="/stream/update/<%= id %>">
+		 	 <div class="form-group ">
+		 	 <% values.forEach(function(val){%>
+		 	 	<label for="Streamid" id="sid">Id</label>
+				  <input type="text" class="form-control" id="Streamid"required name="streamid" value="<%=val.streamid%>" placeholder="Streamid"></input>
+
+				<label for="streamname">Stream </label>
+
+			 <select class="form-control" id="streamname"required name="stream" >
+				   <% if(val.stream=='CSE'){ %>
+					      <option value="BIO">BIO</option>
+					      <option value="CSE" selected>CSE</option>
+					      <option value="BIO-MATHS">BIO-MATHS</option>
+					      <option value="ECNOMICS">ECNOMICS</option>
+					    <%  }; %>
+					  <% if(val.stream=='BIO'){ %>
+					      <option value="BIO" selected>BIO</option>
+					      <option value="CSE">CSE</option>
+					      <option value="BIO-MATHS">BIO-MATHS</option>
+					      <option value="ECNOMICS">ECNOMICS</option>
+					    <%  }; %>
+					   <% if(val.stream=='BIO-MATHS'){ %>
+					      <option value="BIO">BIO</option>
+					      <option value="CSE">CSE</option>
+					      <option value="BIO-MATHS" selected>BIO-MATHS</option>
+					      <option value="ECNOMICS">ECNOMICS</option>
+					    <%  }; %>
+					    <% if(val.stream=='ECNOMICS'){ %>
+					      <option value="BIO">BIO</option>
+					      <option value="CSE">CSE</option>
+					      <option value="BIO-MATHS">BIO-MATHS</option>
+					      <option value="ECNOMICS" selected>ECNOMICS</option>
+					    <%  }; %>
+					<%});%>
+				</select>
+		 			 <button type="submit" class="btn btn-primary update-button">Update</button>
+			</div>
+		</form>
+		</div>
+	</div>
+</div>
+ <%- include("../partials/footer/") %>
+</body>
+</html>

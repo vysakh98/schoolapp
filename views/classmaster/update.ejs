@@ -1,0 +1,50 @@
+<%- include("../partials/header") -%>
+<body>
+<div class="container-fluid">
+<div class="update-container">
+	<h1 class="updateh">Update Class</h1>
+	<div class="table-inner">
+		<form class="updateform" method="post" action="/classmaster/update/<%= id %>">
+		 	 <div class="form-group ">
+		 	 <% values.forEach(function(val){%>
+		 	 	<label for="classid" id="sid">Id</label>
+				  <input type="text" class="form-control" id="classid"required name="classid" value="<%=val.classid%>" placeholder="classid"></input>
+					<label for="Streamname">class</label>
+				    <select class="form-control" id="Streamname"required name="class">
+				   <% if(val.class=='+1'){ %>
+					      <option value="+1" selected>+1</option>
+					      <option value="+2">+2</option>
+					<%  }; %>
+					  <% if(val.class=='+2'){ %>
+					      <option value="+1">+1</option>
+					      <option value="+2" selected>+2</option>
+					    <%  }; %>
+					</select>
+
+					<label for="block">Block</label>
+				  <input type="text" class="form-control" id="block" required name="block" value="<%=val.block%>" placeholder="block"></input>
+
+				  <label for="Roomno">Roomno</label>
+				  <input type="text" class="form-control" id="Roomno"required name="roomno" value="<%=val.roomno%>" placeholder="Roomno"></input>
+					<label for="streamid">Stream</label>
+					<select class="form-control" id="Streamid"required name="streamid">
+					<% results.forEach(function(result){ %>
+						<% if (val.streamid==result.streamid){ %>
+					      <option value="<%= result.streamid %>" selected><%= result.stream %></option>
+					      <%}else{%>
+					      <option value="<%= result.streamid %>"><%= result.stream %></option>
+					     <%};%>
+
+
+				  	<%});%>
+				  	</select>
+				  	<%});%>
+					<button type="submit" class="btn btn-primary update-button">Update</button>
+			</div>
+		</form>
+		</div>
+	</div>
+</div>
+ <%- include("../partials/footer/") %>
+</body>
+</html>

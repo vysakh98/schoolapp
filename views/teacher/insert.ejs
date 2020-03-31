@@ -1,0 +1,40 @@
+<%- include("../partials/header") %>
+
+<body>
+<div class="container-fluid">
+<div class="insert-container">
+	<h1 class="inserth">Add Faculty</h1>
+	<div class="table-inner">
+		<form class="insertform"  method="post" action="/teacher/insert" enctype="multipart/form-data" >
+		 	 <div class="form-group ">
+					<label for="tname" id="tname">Name</label>
+				    <input type="text" class="form-control" id="tname" required name="name" </input>
+				    <label for="qualification" >Qualification</label>
+				    <input type="text" class="form-control" id="qualification" required name="qualification" </input>
+				    <label for="deptname">Department</label>
+				    <select class="form-control" id="deptname"required name="deptname">
+				    	<% results.forEach(function(result){%>
+					      <option value="<%= result.deptid %>"><%= result.deptname %></option>
+					     <%});%>
+					</select>
+					<label for="phone">Phone</label>
+				    <input type="text" class="form-control" id="phone" required name="phone" </input>
+				    <label for="address">Address</label>
+				    <input type="text" class="form-control" id="address" required name="address" </input>
+				    <label for="Email" >Email</label>
+				    <input type="email" class="form-control" id="Email" required name="email" </input>
+				    <label for="doj" >DOJ</label>
+				    <input type="date" class="form-control" id="doj" required name="doj" </input>
+				    <label for="subject">Subject</label>
+				    <input type="text" class="form-control" id="subject" required name="subject" </input>
+				    <label for="pass">Password</label>
+				    <input type="text" class="form-control" id="pass" required name="password" </input>
+				    <input type="file" name="Profilepic">
+		 			<button type="submit" class="btn btn-primary insert-button teachersave" >Save</button>
+			</div>ss
+		</form>
+</div>
+</div>
+</div>
+<%- include("../partials/footer/") %>
+</html>

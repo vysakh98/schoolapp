@@ -1,0 +1,38 @@
+<%- include("../partials/header") %>
+
+<body>
+<div class="container-fluid">
+
+<div class="insert-container">
+
+	<h1 class="inserth">Add Class</h1>
+
+	<div class="table-inner">
+
+		<form class="insertform"  method="post" action="/classmaster/insert">
+		 	 <div class="form-group ">
+				    <label for="class" id="lclass">Class</label>
+				   <select class="form-control" id="class" required name="class">
+					   <option value="+1">+1</option>
+					   <option value="+2">+2</option>
+					</select>
+					<label for="streamid">Streamid</label>
+					 <select class="form-control" id="Streamid"required name="sid">
+				    	<% results.forEach(function(result){%>
+					      	<option value="<%=result.streamid%>"><%=result.stream%></option>
+						<%});%>
+						</select>
+					 <label for="roomno">Roomno</label>
+					  <input type="text" class="form-control" required name="roomno" id="roomno" </input>
+					  <label for="blockno">Blockno</label>
+					   <input type="text" class="form-control" required name="blockno" id="blockno" </input>
+
+		 			 <button type="submit" class="btn btn-primary insert-button" >Save</button>
+			</div>
+		</form>
+</div>
+</div>
+</div>
+ <%- include("../partials/footer/") %>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<%- include("../partials/header") %>
+
+<body>
+<div class="container-fluid">
+<div class="insert-container">
+	<h1 class="inserth">Add Stream</h1>
+	<div class="table-inner">
+		<form class="insertform"  method="post" action="/stream/insert">
+		 	 <div class="form-group ">
+				 <label for="id" id="sid">Id</label>
+				    <input type="text" class="form-control" id="id" required name="streamid" </input>
+				    <label for="streamname" >Name</label>
+				    <select class="form-control" id="Streamname"required name="stream">
+					      <option value="BIO">BIO</option>
+					      <option value="CSE">CSE</option>
+					      <option value="BIO-MATHS">BIO-MATHS</option>
+					      <option value="ECNOMICS">ECNOMICS</option>
+					</select>
+
+		 			 <button type="submit" class="btn btn-primary insert-button" >Save</button>
+			</div>
+		</form>
+</div>
+</div>
+</div>
+<%- include("../partials/footer/") %>
+</body>
+</html>
